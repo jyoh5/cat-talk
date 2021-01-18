@@ -1,0 +1,156 @@
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--brownGR4);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  overflow: hidden;
+  animation: hideSplashScreen 0.5s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+@keyframes pawMoving {
+  0% {
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.splash-screen__icon {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  animation: fallingthump 1s ease-out;
+  animation-delay: 1.5s;
+}
+.splash-screen__icon > i {
+  color: var(--pink);
+  position: absolute;
+  font-size: 50px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  transform: rotateZ(45deg);
+  opacity: 0;
+  animation: pawMoving 1s ease-in-out forwards;
+}
+.splash-screen__icon > i:first-child {
+  top: 60%;
+  left: 10%;
+}
+.splash-screen__icon > i:nth-child(2) {
+  top: 58%;
+  left: 38%;
+  transform: rotateZ(45deg);
+  animation-delay: 0.2s;
+}
+.splash-screen__icon > i:nth-child(3) {
+  top: 43%;
+  left: 43%;
+  transform: rotateZ(45deg);
+  animation-delay: 0.4s;
+}
+.splash-screen__icon > i:nth-child(4) {
+  top: 41%;
+  left: 71%;
+  transform: rotateZ(45deg);
+  animation-delay: 0.6s;
+}
+.splash-screen__icon > i:last-child {
+  top: 26%;
+  left: 76%;
+  transform: rotateZ(45deg);
+  animation-delay: 0.8s;
+}
+
+.splash-screen__text {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  opacity: 0;
+  animation: falling 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+.splash-screen__text > i {
+  font-size: 200px;
+  color: var(--brownGR1);
+  animation: fallingShadow 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+.splash-screen__text > i > span {
+  position: absolute;
+  font-size: 40px;
+  top: 40%;
+  left: 12%;
+  color: var(--brownGR4);
+}
+@keyframes falling {
+  0% {
+    opacity: 0;
+    transform: scale(3) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  55% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+@keyframes fallingShadow {
+  0% {
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  55% {
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  75% {
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  80% {
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes fallingthump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  55% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
