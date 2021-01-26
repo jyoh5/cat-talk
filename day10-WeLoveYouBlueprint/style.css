@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&family=Fraunces:ital,wght@1,500&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import 'variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 400px;
+  height: 900px;
+  background-color: whitesmoke;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.header__banner {
+  height: 120px;
+  background-color: var(--green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px 25px 15px;
+  font-family: Fraunces;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+  font-size: 20px;
+}
+.header__column:first-child:hover,
+.header__column:last-child:hover{
+  animation: updown 0.3s ease-in-out;
+  color: white;
+}
+@keyframes updown{
+  0%{
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.header__search {
+  height: 60px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+  margin: 0px 10px;
+  z-index: 2;
+  position: relative;
+  top: -30px;
+}
+.header__search input {
+  opacity: 0.3;
+  border: none;
+  height: 30px;
+  width: 90%;
+}
+.header__search input:focus {
+  opacity: 0.8;
+  outline: 2px solid var(--darkGreen);
+}
+.header__search i {
+  opacity: 0.3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+}
+.main__columns {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.main_title{
+  font-family: Fraunces;
+  font-style: italic;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.main__contents {
+  display: flex;
+  justify-content: space-between;
+}
+.main__bookimg {
+  max-width: 130px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.main__bookimg img {
+  height: 200px;
+}
+.main__bookimg img:hover {
+  will-change: transform;
+  animation: bigger 0.5s ease-in-out forwards;
+}
+
+@keyframes bigger {
+  from{
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.main__info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_bookInfo {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main__bookTitle {
+  font-family: 'Yeon Sung', cursive;
+  font-size: 24px;
+}
+.main__bookTitle:hover {
+  color: var(--darkGreen);
+}
+
+.main__bookAuthor {
+  font-family: 'Yeon Sung', cursive;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.3;
+}
+.main__bookStar{
+  color: var(--green);
+  font-size: 14px;
+}
+.main__bookStar i.no{
+  color: grey;
+}
+.main__bookStar:hover .fa-hat-wizard:not(.no),
+.main__bestBookList:hover .fa-hat-wizard:not(.no){
+  animation: starEffect 0.3s linear forwards;
+}
+@keyframes starEffect {
+  0%{
+    color: var(--darkGreen);
+    transform: translateY(0px);
+  }
+  100%{
+    color: var(--darkGreen);
+    transform: translateY(-3px);
+  }
+}
+
+.main__category span {
+  background-color: rgba(210, 210, 210, 0.3);
+  font-family: 'Yeon Sung', cursive;
+  font-size: 14px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  
+}
+.main__btn {
+  display: flex;
+  justify-content: space-between;
+}
+.main__btn>i,
+.main__reservation {
+  background-color: var(--green);
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__btn>i {
+  width:40px;
+  height: 40px;
+}
+.main__reservation {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 18px;
+}
+.main__reservation>i{
+  margin-right: 10px;
+}
+.main__btn>i:hover,
+.main__reservation:hover{
+  animation: btnDark 0.3s ease-in-out forwards;
+}
+@keyframes btnDark{
+  from{
+  }
+  to{
+    background-color: var(--darkGreen);
+    color: white;
+  }
+}
+
+
+
+.main__contents--list {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+.main__bestBookList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+.main__bestBookImg {
+  position: relative;
+}
+.main__bestBookImg img{
+  max-width: 90px;
+  max-height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.main__bestBookList:hover .main__bestBookCover{
+  animation: bookEffect 0.3s linear forwards;
+}
+@keyframes bookEffect {
+  from{
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+.main__btn--list {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  opacity: 0;
+}
+.main__btn--list>i{
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.main__bestBookList:hover .main__btn--list{
+  animation: infoEffect 0.3s linear forwards;
+}
+@keyframes infoEffect {
+  from{
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main__contents--list .main__bookStar{
+  font-size: 12px;
+}
+
+.main_bookInfo.author {
+  height:100%;
+  justify-content: flex-start;
+  line-height: 1.2em;
+}
+.main_bookInfo.author h3 {
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+
+.main__bookimg:hover, .main__bookTitle:hover, .main__btn>i:hover, .main__reservation:hover, .main__bestBookList>img:hover, .fa-info-circle:hover {
+  cursor: pointer;
+}

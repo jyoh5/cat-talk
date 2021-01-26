@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.playlist{
+  width: 400px;
+  height: 800px;
+  border: 5px solid yellowgreen;
+  padding: 60px 25px 0px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+}
+.playlist > div {
+  margin-bottom: 40px;
+}
+
+
+.playlist__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.playlist__text {
+  width: 65%;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.playlist__infotext {
+  display: flex;
+  align-content: center;
+}
+.playlist__img {
+  max-width: 120px;
+  height: 120px;
+  overflow: hidden;
+  /* border: 2px solid black; */
+  border-radius: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+.playlist__img img {
+  width: auto;
+  height: 120px;
+}
+.playlist__icon-playing {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  width: 30px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+.playlist__icon-playing > div {
+  width: 3px;
+  height: 20px;
+  background-color: white;
+  animation: playing 1s ease-in-out infinite;
+}
+.playlist__icon-playing > div:nth-child(2){
+  animation-delay: 0.1s;
+}
+.playlist__icon-playing > div:nth-child(3){
+  animation-delay: 0.2s;
+}
+.playlist__icon-playing > div:nth-child(4){
+  animation-delay: 0.3s;
+}
+.playlist__icon-playing > div:last-child{
+  animation-delay: 0.4s;
+}
+@keyframes playing {
+  0%{
+    transform: scaleY(1)
+  }
+  50% {
+    transform: scaleY(1.5)
+  }
+  100%{
+    transform: scaleY(1)
+  }
+}
+.playlist__play-status {
+  position: absolute;
+  top:105px;
+  left: 0px;;
+  padding-left: 8px;
+  opacity: 0.5;
+  display: flex;
+}
+.playlist__play-time{
+  width: 1px;
+  border: 1px solid yellowgreen;
+  animation: playtime 60s linear infinite;
+}
+.playlist__remain-time{
+  width: 94px;
+  border: 1px solid grey;
+  animation: remaintime 60s linear infinite;
+}
+@keyframes playtime {
+  0% {
+  }
+  100% {
+    width: 95px;
+  }
+}
+@keyframes remaintime {
+  0% {
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+.playlist__img:hover .playlist__play-status, 
+.playlist__img:hover .playlist__icon-playing{
+  animation: showPlayTime 0.2s linear forwards;
+}
+@keyframes showPlayTime{
+  from {
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-5px); 
+  }
+}
+
+.playlist__song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+.playlist__song-title {
+  font-size: 32px;
+  font-weight: 800;
+}
+.playlist__song-singer{
+  font-weight: 600;
+}
+
+.playlist__btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 400;
+}
+.playlist__btns > div {
+  border: 2px solid black;
+  box-shadow: 0px 4px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist__btn-play {
+  width: 160px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.playlist__btn-play i {
+  margin-right: 10px;
+}
+.playlist__btn-like, .playlist__btn-add {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.playlist__playlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
+}
+.playlist__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.playlist__info > div:first-child {
+  display: none;
+}
+.playlist__playlist .playlist__img {
+  max-width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+.playlist__playlist .playlist__img img {
+  width: auto;
+  height: 60px;
+}
+.playlist__playlist .playlist__song-title {
+  font-size: 22px;
+}
+.playlist__playlist .playlist__song-singer{
+  font-size: 12px;
+}
+.playlist__btn-otherplay {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px; 
+}
+
+
+.playlist__btns > div:hover, 
+.playlist__info:hover .playlist__btn-otherplay {
+  animation: colorChange 0.1s linear forwards;
+}
+.playlist__info:hover{
+  animation: moveToTheLeft 0.1s linear forwards;
+}
+@keyframes colorChange {
+  from {
+  }
+  to {
+    background-color: yellowgreen;
+    color:white;
+  }
+}
+@keyframes moveToTheLeft {
+  from{
+  }
+  to{
+    transform: translateX(-5px);
+  }
+}

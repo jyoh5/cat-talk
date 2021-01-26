@@ -1,0 +1,42 @@
+body {
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper__column:last-child {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.color-box {
+  border: 5px solid white;
+  width: 170px;
+  height: 300px;
+  margin: 10px;
+}
+.color-box:first-child {
+    background-color: tomato;
+}
+.color-box:nth-child(2) {
+    background-color: teal;
+}
+.color-box:nth-child(3) {
+    background-color: burlywood;
+}
+.color-box:last-child {
+    background-color: thistle;
+}
+.color-box__info{
+  background-color: white;
+  padding: 1px 5px;
+  margin: 15px 0px;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>You Are Awesome!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wapper">
+      <header>
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-search"></i>
+      </header>
+      <main class="playlist__main">
+        <div class="nowSongInfo--list">
+          <div class="nowSongInfo__imgBox">
+            <img class="nowSongInfo__img" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Charlie_Puth_-_Nine_Track_Mind.png/220px-Charlie_Puth_-_Nine_Track_Mind.png">
+            <i class="fas fa-play-circle playBtn"></i>
+          </div>
+          <div class="songText--big">
+            <h1 class="songText__title">One Call Away</h1>
+            <h2 class="songText__singer">Charlie Puth</h2>
+          </div>
+        </div>
+        <div class="thumbs">
+          <div class="thumbs__icon">
+            <i class="fas fa-thumbs-up"></i>
+            103,634
+          </div>
+          <div class="thumbs__icon">
+            <i class="fas fa-thumbs-down"></i>
+            295
+          </div>
+        </div>
+        <div class="playlist">
+          <div class="playlist__playlist">
+            <div class="playlist__column">
+              <img class="playlist__img" src="https://thatgrapejuice.net/wp-content/uploads/2020/06/charlieputhgirlfriend.jpg">
+              <div class="songText">
+                <h2 class="songText__singer">Charlie Puth</h2>
+                <h1 class="songText__title">girlfriend</h1>
+              </div>
+            </div>
+            <div class="playlist__column">
+              <i class="far fa-play-circle"></i>
+              <i class="fas fa-ellipsis-v fa-lg"></i>
+            </div>
+            <div id="hoverLayer">
+            </div>
+          </div>
+          <div class="playlist__playlist">
+            <div class="playlist__column">
+              <div id="nowSongBox">
+                <img class="playlist__img" src="https://upload.wikimedia.org/wikipedia/en/a/a9/Charlie_Puth_-_Dangerously_%28Official_song_cover%29.jpg">
+                <div id="nowSong">
+                  <!-- <div class="nowSong_bar"></div>
+                  <div class="nowSong_bar"></div>
+                  <div class="nowSong_bar"></div>
+                  <div class="nowSong_bar"></div> -->
+                </div>
+              </div>
+              <div class="songText">
+                <h2 class="songText__singer">Charlie Puth</h2>
+                <h1 class="songText__title">Dangerously</h1>
+              </div>
+            </div>
+            <div class="playlist__column">
+              <i class="far fa-pause-circle"></i>
+              <i class="fas fa-ellipsis-v fa-lg"></i>
+            </div>
+            <div id="hoverLayer">
+            </div>
+          </div>
+          <div class="playlist__playlist">
+            <div class="playlist__column">
+              <img class="playlist__img" src="https://i.pinimg.com/originals/3d/fe/96/3dfe960dac5aaa62b9b91df9c3ef22fb.jpg">
+              <div class="songText">
+                <h2 class="songText__singer">Charlie Puth</h2>
+                <h1 class="songText__title">Attention</h1>
+              </div>
+            </div>
+            <div class="playlist__column">
+              <i class="far fa-play-circle"></i>
+              <i class="fas fa-ellipsis-v fa-lg"></i>
+            </div>
+            <div id="hoverLayer">
+            </div>
+          </div>
+          <div class="playlist__playlist">
+            <div class="playlist__column">
+              <img class="playlist__img" src="https://image.yes24.com/momo/TopCate2066/MidCate010/206591798.jpg">
+              <div class="songText">
+                <h2 class="songText__singer">Charlie Puth</h2>
+                <h1 class="songText__title">How Long</h1>
+              </div>
+            </div>
+            <div class="playlist__column">
+              <i class="far fa-play-circle"></i>
+              <i class="fas fa-ellipsis-v fa-lg"></i>
+            </div>
+            <div id="hoverLayer">
+            </div>
+          </div>
+        </div>
+        <div class="playbar">
+          <div class="songText">
+            <h2 class="songText__singer">Charlie Puth</h2>
+            <h1 class="songText__title">Dangerously</h1>
+          </div>
+          <div class="playbar__btn">
+            <i class="fas fa-step-backward"></i>
+            <i class="fas fa-pause"></i>
+            <i class="fas fa-step-forward"></i>
+          </div>
+        </div>
+      </main>
+    </div>
+  
+    <div class="wapper nowPlaying">
+      <header class="nowPlaying__header">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </header>
+      <main class="nowPlaying__main">
+        <div class="nowSongInfo">
+          <div class="nowSongInfo__imgBox">
+            <img class="nowSongInfo__img" src="https://upload.wikimedia.org/wikipedia/en/a/a9/Charlie_Puth_-_Dangerously_%28Official_song_cover%29.jpg">
+            <i class="fas fa-pause-circle playBtn"></i>
+          </div>
+          <div class="songText--big">
+            <h1 class="songText__title">Dangerously</h1>
+            <h2 class="songText__singer">Charlie Puth</h2>
+          </div>
+        </div>
+        <div class="playTime">
+          <div class="playTime__num">
+            <div class="playTime__playTime">1:02</div>
+            <div class="playTime__remainTime">2:58</div>
+          </div>
+          <div class="playTime__bar">
+            <div class="playTime__playline"></div>
+            <div class="playTime__remainline"></div>
+            <i class="fas fa-circle"></i>
+          </div>
+        </div>
+        <div class="playController">
+          <div class="playController__icon">
+            <i class="fas fa-redo-alt"></i>
+          </div>
+          <div class="playController__icon">
+            <i class="fas fa-step-backward"></i>
+          </div>
+          <div class="playController__icon">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="playController__icon">
+            <i class="fas fa-step-forward"></i>
+          </div>
+          <div class="playController__icon">
+            <i class="fas fa-random"></i>
+          </div>
+        </div>
+        <div class="more">
+          <div class="more__bar"></div>
+          <div class="more__textBox">
+            <span class="more__text">List</span>
+            <span class="more__text">Lyrics</span>
+            <span class="more__text">Info</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
